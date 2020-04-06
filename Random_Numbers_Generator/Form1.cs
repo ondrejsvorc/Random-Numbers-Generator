@@ -219,32 +219,6 @@ namespace Random_Numbers_Generator
 
 
 
-        /*MAYBE
-         * PUT CZECH, ENGLISH AND GERMAN FLAG IN THE RIGHT TOP CORNER - IF ONE OF THE FLAGS IS CLICKED ON, LANGUAGE CHANGES
-         * 
-         *
-         */
-
-
-        /* TO-DO
-         * 
-         * 
-        */
-
-        /* DONE
-        * 
-        * MAKE THE RE-GENERATE FUNCTION WORK
-        * LIMIT THE txtAmount AND THE txtTo TO 999999999 OTHERWISE THE PROGRAMME CRASHES
-        * txtFrom MUST BE LOWER THAN txtTo
-        * 
-        * 
-        * 
-        * 
-        */
-
-
-
-
 
 
 
