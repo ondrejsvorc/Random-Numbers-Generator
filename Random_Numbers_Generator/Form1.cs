@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Random_Numbers_Generator
@@ -13,8 +6,6 @@ namespace Random_Numbers_Generator
     public partial class Home : Form
     {
         Random random = new Random();
-
-
 
         #region Initialization of the form
         public Home()
@@ -32,6 +23,7 @@ namespace Random_Numbers_Generator
         }
         #endregion
 
+
         #region FUNCTIONS
 
         #region FUNCTION: Shows the "Re-Generate" button
@@ -45,12 +37,12 @@ namespace Random_Numbers_Generator
         #region FUNCTION: Re-generates the numbers to the main text box
         void RandomNumsToMainTxtBox()
         {
-            int valueFrom = int.Parse(txtFrom.Text);
-            int valueTo = int.Parse(txtTo.Text);
-            int valueAmount = int.Parse(txtAmount.Text);
-
             try
             {
+                int valueFrom = int.Parse(txtFrom.Text);
+                int valueTo = int.Parse(txtTo.Text);
+                int valueAmount = int.Parse(txtAmount.Text);
+
                 int nums = random.Next(valueFrom, valueTo);           // First random number
                 txtRandomNumbers.Text = nums.ToString();
 
@@ -74,12 +66,13 @@ namespace Random_Numbers_Generator
         #region FUNCTION: Generates more random numbers
         void GenerateMoreToMainTxtBox()
         {
-            int valueFrom = int.Parse(txtFrom.Text);
-            int valueTo = int.Parse(txtTo.Text);
-            int valueAmount = int.Parse(txtAmount.Text);
-
             try
             {
+                int valueFrom = int.Parse(txtFrom.Text);
+                int valueTo = int.Parse(txtTo.Text);
+                int valueAmount = int.Parse(txtAmount.Text);
+
+
                 int nums = random.Next(valueFrom, valueTo);           // First random number
 
                 txtRandomNumbers.Text += nums.ToString() + "\n";
@@ -104,6 +97,7 @@ namespace Random_Numbers_Generator
 
         #endregion
 
+
         #region EVENTS: TextChanged
 
         #region EVENT: TxtFrom_TextChanged
@@ -111,17 +105,22 @@ namespace Random_Numbers_Generator
         {
             int numFrom;
             int numTo;
+            int numAmount;
 
             int.TryParse(txtFrom.Text, out numFrom);
             int.TryParse(txtTo.Text, out numTo);
+            int.TryParse(txtAmount.Text, out numAmount);
 
-            if (numFrom < numTo)
+
+            if (numFrom < numTo && numAmount > 1)
             {
                     btnGenerate.Enabled = true;
+                    btnReGenerate.Enabled = true;
             }
             else
             {
                 btnGenerate.Enabled = false;
+                btnReGenerate.Enabled = false;
             }
         }
         #endregion
@@ -130,16 +129,26 @@ namespace Random_Numbers_Generator
         private void TxtAmount_TextChanged(object sender, EventArgs e)
         {
             int numAmount;
+
+            int numFrom;
+            int numTo;
+  
+
+            int.TryParse(txtFrom.Text, out numFrom);
+            int.TryParse(txtTo.Text, out numTo);
+
             if (int.TryParse(txtAmount.Text, out numAmount))
             {
-                if (numAmount > 1)
+                if (numAmount > 1 && numFrom < numTo)
                 {
                     btnGenerate.Enabled = true;
+                    btnReGenerate.Enabled = true;
                 }
             }
             else
             {
                 btnGenerate.Enabled = false;
+                btnReGenerate.Enabled = false;
             }
         }
         #endregion
@@ -153,6 +162,7 @@ namespace Random_Numbers_Generator
         #endregion
 
         #endregion
+
 
         #region EVENTS: KeyPress
 
@@ -193,6 +203,7 @@ namespace Random_Numbers_Generator
 
         #endregion
 
+
         #region BUTTONS: Generate and Re-Generate numbers
 
         #region BUTTON: Generate 
@@ -215,6 +226,32 @@ namespace Random_Numbers_Generator
 
         #endregion
 
+
+
+
+
+        /*MAYBE
+         * PUT CZECH, ENGLISH AND GERMAN FLAG IN THE RIGHT TOP CORNER - IF ONE OF THE FLAGS IS CLICKED ON, LANGUAGE CHANGES
+         * 
+         *
+         */
+
+
+        /* TO-DO
+         * 
+         * 
+        */
+
+        /* DONE
+        * 
+        * MAKE THE RE-GENERATE FUNCTION WORK
+        * LIMIT THE txtAmount AND THE txtTo TO 999999999 OTHERWISE THE PROGRAMME CRASHES
+        * txtFrom MUST BE LOWER THAN txtTo
+        * 
+        * 
+        * 
+        * 
+        */
 
 
 
