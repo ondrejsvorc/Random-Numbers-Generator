@@ -8,8 +8,6 @@
 
 * 3x textBox
   * only numbers can be inserted (max. number 999999999)
-  * 
-  *
   
 * 1x richTextBox
   * read-only
@@ -17,8 +15,7 @@
   * automatically scrolls down based on content
   
 * 2x button
-  * 
-  *
-  *
+  * disabled by default (enabled when conditions are met)
+
 
 ![alt tag](https://github.com/ondrejsvorc/Random-Numbers-Generator/blob/master/Screenshots/start.png)
