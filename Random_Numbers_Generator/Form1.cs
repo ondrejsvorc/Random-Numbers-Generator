@@ -18,7 +18,7 @@ namespace Random_Numbers_Generator
             btnReGenerate.Hide();
 
             txtFrom.MaxLength = 9;
-            txtTo.MaxLength = 9;
+            txtTo.MaxLength = 9;            
             txtAmount.MaxLength = 9;
         }
 
@@ -31,8 +31,6 @@ namespace Random_Numbers_Generator
             btnReGenerate.Show();
             btnGenerate.Text = "Generate more";
         }
-
-
 
 
         // FUNCTION: Re-generates the numbers to the main text box
@@ -50,15 +48,13 @@ namespace Random_Numbers_Generator
                 for (int i = 0; i < valueAmount - 1; i++)             // First random number was already printed out
                 {
                     nums = random.Next(valueFrom, valueTo);
-                    txtRandomNumbers.Text += "\n" + nums.ToString();  // txtRandomNumbers.Text = txtRandomNumbers.Text + ...
+                    txtRandomNumbers.Text += "\n" + nums.ToString();  
 
                 }
                 txtRandomNumbers.Text += "\n" + "\n";
             }
             catch { }
         }
-
-
 
 
         // FUNCTION: Generates more random numbers
@@ -88,8 +84,6 @@ namespace Random_Numbers_Generator
                 txtRandomNumbers.Text = newTxt + "\n";
             }
             catch { }
-
-
         }
 
 
@@ -127,7 +121,6 @@ namespace Random_Numbers_Generator
 
             int numFrom;
             int numTo;
-  
 
             int.TryParse(txtFrom.Text, out numFrom);
             int.TryParse(txtTo.Text, out numTo);
@@ -169,7 +162,6 @@ namespace Random_Numbers_Generator
         }
 
 
-
         // EVENT: TxtTo_KeyPress
         private void TxtTo_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -178,8 +170,6 @@ namespace Random_Numbers_Generator
                 e.Handled = true;
             }
         }
-        
-        
         
 
         // EVENT: TxtAmount_KeyPress
