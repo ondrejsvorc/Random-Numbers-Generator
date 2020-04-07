@@ -6,12 +6,12 @@ using System.Runtime.InteropServices;
 // sadu atributů. Změnou hodnot těchto atributů se upraví informace
 // přidružené k sestavení.
 [assembly: AssemblyTitle("Random_Numbers_Generator")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Random_Numbers_Generator")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Ondřej Švorc")]
 [assembly: AssemblyProduct("Random_Numbers_Generator")]
-[assembly: AssemblyCopyright("Copyright ©  2020")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCopyright("Copyright © Ondřej Švorc 2020")]
+[assembly: AssemblyTrademark("© Ondřej Švorc")]
 [assembly: AssemblyCulture("")]
 
 // Nastavení ComVisible na false způsobí neviditelnost typů v tomto sestavení
