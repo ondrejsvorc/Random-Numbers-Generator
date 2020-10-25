@@ -103,8 +103,8 @@
             this.txtFrom.Name = "txtFrom";
             this.txtFrom.Size = new System.Drawing.Size(100, 33);
             this.txtFrom.TabIndex = 1;
-            this.txtFrom.TextChanged += new System.EventHandler(this.TxtFrom_TextChanged);
-            this.txtFrom.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtFrom_KeyPress);
+            this.txtFrom.TextChanged += new System.EventHandler(this.TxtChanged);
+            this.txtFrom.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtKeyPress);
             // 
             // txtTo
             // 
@@ -112,7 +112,8 @@
             this.txtTo.Name = "txtTo";
             this.txtTo.Size = new System.Drawing.Size(100, 33);
             this.txtTo.TabIndex = 2;
-            this.txtTo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTo_KeyPress);
+            this.txtTo.TextChanged += new System.EventHandler(this.TxtChanged);
+            this.txtTo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtKeyPress);
             // 
             // lbTo
             // 
@@ -131,8 +132,8 @@
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.Size = new System.Drawing.Size(100, 33);
             this.txtAmount.TabIndex = 3;
-            this.txtAmount.TextChanged += new System.EventHandler(this.TxtAmount_TextChanged);
-            this.txtAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtAmount_KeyPress);
+            this.txtAmount.TextChanged += new System.EventHandler(this.TxtChanged);
+            this.txtAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtKeyPress);
             // 
             // lbAmount
             // 
