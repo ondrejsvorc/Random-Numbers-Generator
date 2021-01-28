@@ -6,7 +6,7 @@ namespace Random_Numbers_Generator
     public partial class Home : Form
     {
         int valueFrom, valueTo, valueAmount;
-        Random random = new Random();
+        Random random;
 
         public Home()
         {
@@ -16,6 +16,8 @@ namespace Random_Numbers_Generator
 
         void Config()
         {
+            random = new Random();
+        
             btnGenerate.Enabled = false;
 
             btnReGenerate.Hide();
